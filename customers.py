@@ -52,3 +52,18 @@ final_price = purchase_amount - discount_amount
 print(f"Tier: {customer['tier']}")
 print(f"Discount %: {discount_rate}")
 print(f"Final price: ${final_price:.2f}")
+
+# Excercise 6
+customers_list = [
+    {"name": "Alice", "tier": "platinum"},
+    {"name": "Bob", "tier": "gold"},
+    {"name": "Charlie", "tier": "silver"},
+    {"name": "Diana", "tier": "bronze"}
+]
+
+purchase_amount = 300.00
+for cust in customers_list:
+    tier = cust["tier"]
+    discount_rate = tier_discounts.get(tier, 0)
+    discount_amount = purchase_amount * discount_rate
+    print(f"Customer: {cust['name']} | Tier: {tier} | Discount: ${discount_amount:.2f}")
