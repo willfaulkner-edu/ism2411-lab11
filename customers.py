@@ -78,4 +78,17 @@ for product_name, info in catalog.items():
     if info["stock"] < 20:
         print(f"LOW STOCK alert: {product_name} (Stock: {info['stock']})")
 
-        
+# Excercise 8
+transactions = [
+    {"region": "south", "amount": 300},
+    {"region": "north", "amount": 150},
+    {"region": "south", "amount": 200}
+]
+sales_summary = {}
+for tx in transactions:
+    reg = tx["region"]
+    amt = tx["amount"]
+    sales_summary[reg] = sales_summary.get(reg, 0) + amt
+
+for reg in sorted(sales_summary):
+    print(f"{reg}: {sales_summary[reg]}")
