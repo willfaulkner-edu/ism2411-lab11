@@ -1,3 +1,6 @@
+#1. Bracket noation messes up your code with a key error if a key isnt found while get() safely returns to defauly vaule instead of messsing up. Use bracket notation when you know yur key exists, Use .get() when working with uncertain date where a key might be missing.
+#2 It remind me of groupin and summarizinzing data in excel. Python version is more useful for large datasets because it scales much faster without slowing down or crashing.
+
 # Excercise 1
 customer = {
     "name": "Alice",
