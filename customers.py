@@ -28,3 +28,10 @@ print(customer)
 # Excercise 3
 email_result = customer.get("email", "no email on file")
 print(email_result)
+
+# Excercise 4
+for key, value in customer.items():
+    print(f"{key}: {value}")
+
+for key in customer:
+    print(key)
